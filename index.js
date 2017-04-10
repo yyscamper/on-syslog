@@ -15,7 +15,10 @@ var di = require('di'),
     logger = injector.get('Logger').initialize('Syslog'),
     syslog = injector.get('Syslog');
 
-syslog.start()
+
+
+
+    syslog.start()
 .catch(function(err) {
   logger.error('Failure starting Syslog service' + err.stack);
   process.nextTick(function(){
